@@ -18,3 +18,17 @@ function adicionarAmigo() {
 
   inputAmigo.value = "";
 }
+
+function sortearAmigo() {
+  if (amigos.length === 0) {
+    alert("A lista está vazia! Adicione nomes antes de sortear.");
+    return;
+  }
+
+  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+
+  const nomeSorteado = amigos[indiceAleatorio];
+
+  resultado.textContent = `O amigo secreto sorteado é: ${nomeSorteado}`;
+  
+}
